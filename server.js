@@ -12,4 +12,8 @@ app.use(express.static(path.join(__dirname)));
 
 app.all("/api/archive", (req, res) => archiveHandler(req, res));
 
-app.listen(port, () => console.log(`Sample Archive is running on http://127.0.0.1:${port}`));
+if (require.main === module) {
+  app.listen(port, () => console.log(`Sample Archive is running on http://127.0.0.1:${port}`));
+}
+
+module.exports = app;

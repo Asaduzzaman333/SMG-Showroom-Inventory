@@ -1,9 +1,3 @@
 {
-  "version": 2,
-  "rewrites": [
-    {
-      "source": "/api/archive",
-      "destination": "/api/archive.js"
-    }
-  ]
+  "cleanUrls": true
 }
