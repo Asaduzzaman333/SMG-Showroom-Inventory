@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Private garment sample showroom archive" />
+    <title>Sample Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#overview" aria-label="Sample Archive home">
+          <span class="brand-mark">SA</span>
+          <span><strong>Sample</strong><em>Archive</em></span>
+        </a>
+        <nav class="nav-list" aria-label="Primary navigation">
+          <a href="#overview" data-nav="overview"><i data-lucide="layout-dashboard"></i>Overview</a>
+          <a href="#buyers" data-nav="buyers"><i data-lucide="users-round"></i>Buyers</a>
+          <a href="#samples" data-nav="samples"><i data-lucide="grid-2x2"></i>Samples</a>
+          <a href="#locations" data-nav="locations"><i data-lucide="map-pin"></i>Locations</a>
+          <a href="#history" data-nav="history"><i data-lucide="arrow-left-right"></i>Movement History</a>
+        </nav>
+        <div class="sidebar-actions">
+          <button class="side-action" data-action="add-buyer"><i data-lucide="user-round-plus"></i><span>Add Buyer</span></button>
+          <button class="side-action primary" data-action="add-sample"><i data-lucide="plus"></i><span>Add Sample</span></button>
+        </div>
+        <div class="sidebar-footer"><span class="live-dot"></span> Private internal archive</div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="icon-button menu-toggle" data-action="toggle-menu" aria-label="Toggle navigation"><i data-lucide="menu"></i></button>
+          <div class="header-context" id="header-context">Private garment showroom</div>
+          <div class="header-actions">
+            <button class="utility-button" data-action="backup"><i data-lucide="download"></i><span>Backup</span></button>
+            <button class="utility-button" data-action="restore"><i data-lucide="upload"></i><span>Restore</span></button>
+            <input type="file" id="restore-input" accept="application/json" hidden />
+          </div>
+        </header>
+        <div id="app" class="page-content"></div>
+      </main>
+    </div>
+
+    <div id="modal-root"></div>
+    <div id="toast-root" aria-live="polite"></div>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
